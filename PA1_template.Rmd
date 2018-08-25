@@ -41,8 +41,10 @@ colnames(aggregate_interval)<-c('interval','average steps')
 plot(aggregate_interval$interval,aggregate_interval$'average steps',type="l", xlab = "5 minute interval", ylab = "Average steps", main = "Time series plot of average number of steps taken for 5-min interval")
 
 ## obtain interval with max number of steps
-apply(aggregate_interval, MARGIN = 2, function(x) max(x, na.rm=TRUE))
+max(aggregate_interval$`average steps`)
+aggregate_interval[aggregate_interval$`average steps`== max(aggregate_interval$`average steps`),]
 ```
+Interval 835 has the maximum number of steps
 
 ## Imputing missing values
 ```{r count NA}

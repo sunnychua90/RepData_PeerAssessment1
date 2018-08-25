@@ -62,13 +62,22 @@ plot(aggregate_interval$interval,aggregate_interval$'average steps',type="l", xl
 
 ```r
 ## obtain interval with max number of steps
-apply(aggregate_interval, MARGIN = 2, function(x) max(x, na.rm=TRUE))
+max(aggregate_interval$`average steps`)
 ```
 
 ```
-##      interval average steps 
-##     2355.0000      206.1698
+## [1] 206.1698
 ```
+
+```r
+aggregate_interval[aggregate_interval$`average steps`== max(aggregate_interval$`average steps`),]
+```
+
+```
+##     interval average steps
+## 104      835      206.1698
+```
+Interval 835 has the maximum number of steps
 
 ## Imputing missing values
 
