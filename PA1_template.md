@@ -146,4 +146,4 @@ colnames(aggregate_interval_imputed_data)<-c('interval','day','steps')
 xyplot(steps ~ interval | day, data = aggregate_interval_imputed_data, type = "l", ylab="Number of steps", layout = c(1,2))
 ```
 
-![](PA1_template_files/figure-html/activity diff-1.png?raw=true)<!-- -->
+![](https://raw.githubusercontent.com/sunnychua90/RepData_PeerAssessment1/master/PA1_template_files/figure-html/activity%20diff-1.png)<!-- -->
