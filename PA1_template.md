@@ -26,7 +26,7 @@ colnames(aggregate_data)<-c('date','steps')
 hist(aggregate_data$steps,col="green", xlab="Number of steps", main = "Total number of steps taken each day")
 ```
 
-![](PA1_template_files/figure-html/aggregate date-1.png)<!-- -->
+![](PA1_template_files/figure-html/aggregate date-1.png?raw=true)<!-- -->
 
 ```r
 ## mean steps per day
@@ -58,7 +58,7 @@ colnames(aggregate_interval)<-c('interval','average steps')
 plot(aggregate_interval$interval,aggregate_interval$'average steps',type="l", xlab = "5 minute interval", ylab = "Average steps", main = "Time series plot of average number of steps taken for 5-min interval")
 ```
 
-![](PA1_template_files/figure-html/aggregate intervals-1.png)<!-- -->
+![](PA1_template_files/figure-html/aggregate intervals-1.png?raw=true)<!-- -->
 
 ```r
 ## obtain interval with max number of steps
@@ -93,7 +93,7 @@ colnames(aggregate_imputed_data)<-c('date','steps')
 hist(aggregate_imputed_data$steps,col="blue",xlab="Number of steps", main="Total number of steps taken each day (imputed values)")
 ```
 
-![](PA1_template_files/figure-html/count NA-1.png)<!-- -->
+![](PA1_template_files/figure-html/count NA-1.png?raw=true)<!-- -->
 
 ```r
 ## mean steps per day (imputed data)
@@ -146,4 +146,4 @@ colnames(aggregate_interval_imputed_data)<-c('interval','day','steps')
 xyplot(steps ~ interval | day, data = aggregate_interval_imputed_data, type = "l", ylab="Number of steps", layout = c(1,2))
 ```
 
-![](PA1_template_files/figure-html/activity diff-1.png)<!-- -->
+![](PA1_template_files/figure-html/activity diff-1.png?raw=true)<!-- -->
